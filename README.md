@@ -10,3 +10,7 @@ if (mults.Count() > 0)
         MessageBox.Show($"以下SR單號選超過1筆，{strMult}");
         return;
     }
+
+items.GroupBy(e => e).ToDictionary(k => k.Key, v => v.Count());
+    
+    
